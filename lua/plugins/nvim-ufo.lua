@@ -25,6 +25,7 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
     return newVirtText
 end
 
+
 return {
     'kevinhwang91/nvim-ufo',
     dependencies = { 'kevinhwang91/promise-async' },
@@ -34,6 +35,12 @@ return {
         map('n', 'zR', ufo.openAllFolds, 'Open all folds')
         map('n', 'zM', ufo.closeAllFolds, 'Close all folds')
         map('n', '<leader>zz', 'zA', 'Toggle fold')
+
+        vim.o.foldcolumn = '1' -- '0' is not bad
+        vim.o.fillchars = [[eob: ,fold: ,foldopen:▾,foldsep: ,foldclose:▸]]
+        vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+        vim.o.foldlevelstart = 99
+        vim.o.foldenable = true
 
         ufo.setup({
             provider_selector = function()
