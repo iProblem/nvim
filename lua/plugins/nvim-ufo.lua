@@ -37,12 +37,12 @@ return {
         map('n', '<leader>zz', 'zA', 'Toggle fold')
 
 
-        vim.o.foldcolumn = '1' -- Mostra a coluna de dobras
-        vim.o.foldlevel = 99 -- Alto valor para garantir que as dobras sejam controladas corretamente
+--        vim.o.foldcolumn = '1' -- Mostra a coluna de dobras
+--        vim.o.foldlevel = 99 -- Alto valor para garantir que as dobras sejam controladas corretamente
         vim.o.foldlevelstart = 99
         vim.o.foldenable = true
 
-        vim.o.statuscolumn='%=%l%s%{foldlevel(v:lnum) > 0 ? (foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? "▸" : "▾"): " ") : " " }'
+--        vim.o.statuscolumn='%=%l%s%{foldlevel(v:lnum) > 0 ? (foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? "▸" : "▾"): " ") : " " }'
 
         ufo.setup({
             provider_selector = function()

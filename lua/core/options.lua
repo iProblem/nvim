@@ -12,7 +12,7 @@ local opts = {
 
 	splitbelow = true,
 	splitright = true,
- --   wrap = false,
+--    wrap = false,
 	scrolloff = 10,
 	fileencoding = "utf-8",
 	termguicolors = true,
